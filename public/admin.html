@@ -1,1 +1,20 @@
-
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Paneli</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Paneli</h1>
+        <div id="itemList">
+            <!-- Giysiler burada listelenecek -->
+        </div>
+        <div id="editForm" style="display: none;">
+            <h2>Giysi Düzenle</h2>
+            <input type="text" id="editName" placeholder="Giysi Adı">
+            <input type="number" id="editPrice" placeholder="Fiyat">
+            <button onclick="saveChanges()">Kaydet</button>
+            <button onclick="cancelEdit()
