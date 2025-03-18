@@ -6,8 +6,8 @@ TOKEN = "5741055163:AAGgnte1NoULR4ERoeX43aCGiF6VDOOds4o"
 
 def start(update: Update, context: CallbackContext) -> None:
     # WebView bağlantısını gönder
-    webview_url = "https://your-vercel-app.vercel.app"
-    update.message.reply_text(f"MurClub'a giriş yapmak için [buraya tıklayın]({webview_url}).", parse_mode="Markdown")
+    webview_url = "https://lioneruser4.github.io/roulette-game/"
+    update.message.reply_text(f" giriş yapmak için [buraya tıklayın]({webview_url}).", parse_mode="Markdown")
 
 def main() -> None:
     # Bot'u başlat
