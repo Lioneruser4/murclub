@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MurClub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <button id="groupsButton">Gruplar</button>
+            <button id="marketButton">Market</button>
+            <button id="bekarTimesButton">Bekar Times</button>
+        </div>
+        <div class="main">
+            <div id="lobby">
+                <h1>Lobi</h1>
+                <div id="messages"></div>
+                <input type="text" id="messageInput" placeholder="Mesajınızı yazın...">
+                <button id="sendButton">Gönder</button>
+            </div>
+            <div id="coinCollector">
+                <button id="collectButton">Topla</button>
+                <p id="countdown">3:00:00</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
