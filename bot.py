@@ -7,7 +7,7 @@ import os
 load_dotenv()
 
 # Telegram bot token'ını buradan al
-TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TOKEN = "5741055163:AAGgnte1NoULR4ERoeX43aCGiF6VDOOds4o"
 
 def start(update: Update, context: CallbackContext) -> None:
     # Inline Keyboard Butonu oluştur
