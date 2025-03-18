@@ -1,13 +1,26 @@
-from telegram import Update
-from telegram.ext import Updater, CommandHandler, CallbackContext
+from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
+from telegram.ext import Updater, CommandHandler, CallbackContext, CallbackQueryHandler
+from dotenv import load_dotenv
+import os
 
-# Telegram bot token'ınızı buraya ekleyin
-TOKEN = "5741055163:AAGgnte1NoULR4ERoeX43aCGiF6VDOOds4o"
+# .env dosyasından ortam değişkenlerini yükle
+load_dotenv()
+
+# Telegram bot token'ını buradan al
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 
 def start(update: Update, context: CallbackContext) -> None:
-    # WebView bağlantısını gönder
-    webview_url = "https://lioneruser4.github.io/roulette-game/"
-    update.message.reply_text(f" giriş yapmak için [buraya tıklayın]({webview_url}).", parse_mode="Markdown")
+    # Inline Keyboard Butonu oluştur
+    keyboard = [
+        [InlineKeyboardButton("Oynamak için dokun 🎮", web_app={"url": "https://lioneruser4.github.io/slot-game/"})]
+    ]
+    reply_markup = InlineKeyboardMarkup(keyboard)
+
+    # Kullanıcıya mesaj gönder
+    update.message.reply_text(
+        "Slot oyununu oynamak için aşağıdaki butona dokunun:",
+        reply_markup=reply_markup
+    )
 
 def main() -> None:
     # Bot'u başlat
