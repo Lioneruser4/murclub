@@ -1,9 +1,8 @@
 from telegram import Update
 from telegram.ext import Updater, CommandHandler, CallbackContext
-import os
 
 # Telegram bot token'ınızı buraya ekleyin
-TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TOKEN = "5741055163:AAGgnte1NoULR4ERoeX43aCGiF6VDOOds4o"
 
 def start(update: Update, context: CallbackContext) -> None:
     # WebView bağlantısını gönder
