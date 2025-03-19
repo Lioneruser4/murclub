@@ -59,7 +59,7 @@ def main() -> None:
     dispatcher.add_handler(CommandHandler("start", start))
 
     # WebView'den gelen verileri işle
-    dispatcher.add_handler(MessageHandler(Filters.web_app_data, handle_webview_data))
+    dispatcher.add_handler(MessageHandler(filters.web_app_data, handle_webview_data))
 
     # Bot'u çalıştır
     updater.start_polling()
